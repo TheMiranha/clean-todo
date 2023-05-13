@@ -14,7 +14,7 @@ const TodoList = ({
   return (
     <Container
       display="flex"
-      css={{ maxW: '90vw', width: '600px', gap: '20px' }}
+      css={{ maxW: '90vw', width: '600px', gap: '20px', pt: '20px', pb: '20px'}}
     >
       {todos.map(todo => (
         <Todo
@@ -29,3 +29,4 @@ const TodoList = ({
 }
 
 export { TodoList }
+
