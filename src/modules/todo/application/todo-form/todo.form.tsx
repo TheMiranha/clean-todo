@@ -9,8 +9,10 @@ const TodoForm = ({ onCreate }: { onCreate: (todoTitle: string) => void }) => {
   }
 
   const handleSubmit = () => {
-    onCreate(title)
-    setTitle('')
+    if (title.trim().length > 0) {
+      onCreate(title)
+      setTitle('')
+    }
   }
 
   return (
@@ -36,3 +38,4 @@ const TodoForm = ({ onCreate }: { onCreate: (todoTitle: string) => void }) => {
 }
 
 export { TodoForm }
+
